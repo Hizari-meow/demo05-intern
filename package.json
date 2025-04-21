@@ -15,7 +15,9 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.5.0",
-    "sass": "^1.86.3"
+    "sass": "^1.86.3",
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.13"
   },
   "devDependencies": {
     "@types/node": "^20",

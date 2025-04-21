@@ -1,0 +1,406 @@
+.calendar {
+  &__layout {
+    display: flex;
+    height: 140vh;
+    background-color: #fff;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sider {
+    background-color: #fff !important;
+    border-left: 1px solid #f0f0f0;
+    padding: 20px;
+  }
+}
+// Calendar Header
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &__title-section {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-right: 20px !important;
+    margin-bottom: 0 !important;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__today-button {
+    margin: 0 10px;
+    color: inherit;
+    border-color: inherit;
+    background-color: #fff; // nếu muốn chắc chắn không đổi màu nền
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #3fa34b !important;
+      border-color: #3fa34b !important;
+    }
+  }
+
+  &__view-selector {
+    display: flex;
+    align-items: center;
+  }
+
+  &__radio-group {
+    display: flex;
+
+    .ant-radio-button-wrapper {
+      color: #000;
+
+      &:hover {
+        color: #000;
+      }
+
+      &.ant-radio-button-wrapper-checked {
+        background-color: #3fa34b !important;
+        color: #fff !important;
+        border-color: #3fa34b !important;
+
+        &::before {
+          background-color: #3fa34b !important;
+        }
+
+        &:hover {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}
+
+// Calendar Grid
+.calendar-grid {
+  flex: 1;
+  &__table {
+    height: 100%;
+
+    .ant-table-thead > tr > th {
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .ant-table-cell {
+      padding: 0 !important;
+      vertical-align: top;
+      height: 120px;
+    }
+  }
+
+  &__row {
+    height: 120px;
+  }
+}
+.today-highlight {
+  border-radius: 5px;
+}
+
+// Calendar Cell
+.calendar-cell {
+  height: 100%;
+  min-height: 120px;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+
+  &--faded {
+    opacity: 0.7;
+  }
+
+  &--today {
+    background-color: rgba(24, 144, 255, 0.05);
+  }
+
+  &__date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+
+    &--today {
+      background-color: #3fa34b;
+      color: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  &__events {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__event {
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    font-size: 12px;
+
+    &--blue {
+      background-color: rgba(24, 144, 255, 0.1);
+      border-left: 3px solid #1890ff;
+    }
+
+    &--green {
+      background-color: rgba(82, 196, 26, 0.1);
+      border-left: 3px solid #52c41a;
+    }
+
+    &--orange {
+      background-color: rgba(250, 173, 20, 0.1);
+      border-left: 3px solid #faad14;
+    }
+  }
+
+  &__event-time {
+    display: block;
+    font-size: 11px;
+    color: #888;
+  }
+
+  &__event-title {
+    display: block;
+    font-weight: 500;
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+  }
+
+  &__event-room {
+    display: block;
+    font-size: 11px;
+    color: #888;
+  }
+}
+
+// Calendar Sidebar
+.calendar-sidebar {
+  width: 290px;
+  height: 550px;
+  margin-top: 6px;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  position: relative;
+  bottom: 19px;
+  right: 20px;
+  background-color: #fff;
+
+  &__mini-calendar {
+    margin-bottom: 20px;
+
+    .ant-picker-calendar {
+      background-color: #fff;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px !important;
+  }
+
+  &__events {
+    flex: 1;
+  }
+
+  &__list {
+    height: 1%;
+  }
+
+  &__list-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  &__event-time {
+    display: block;
+    font-size: 12px;
+    color: #888;
+  }
+
+  &__event-room {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 2px;
+  }
+  &__calendar {
+    .ant-picker-cell {
+      .ant-picker-cell-inner {
+        transition: all 0.3s ease;
+      }
+
+      // Ngày được chọn (selected)
+      &.ant-picker-cell-selected .ant-picker-cell-inner,
+      &.ant-picker-cell-selected:hover .ant-picker-cell-inner,
+      &.ant-picker-cell-range-start .ant-picker-cell-inner,
+      &.ant-picker-cell-range-end .ant-picker-cell-inner {
+        background-color: #3fa34b !important;
+        color: #fff !important;
+      }
+      &.ant-picker-cell-today .ant-picker-cell-inner::before {
+        border: 1px solid #3fa34b !important;
+      }
+      // Ngày hôm nay
+      &.ant-picker-cell-today .ant-picker-cell-inner {
+        background-color: #3fa34b !important;
+        color: #fff !important;
+      }
+      // Hover nếu muốn thêm hiệu ứng
+      &:hover .ant-picker-cell-inner {
+        border-color: #3fa34b;
+      }
+    }
+  }
+}
+// Variables
+$primary-color: #001529;
+$border-color: #f0f0f0;
+$current-bg: #e6f7ff;
+$shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+// Block
+.schedule {
+  height: 100vh;
+  background-color: white !important;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    background: #3fa34b;
+    padding: 0 24px;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__grid {
+    display: flex;
+    border: 1px solid #e8e8e8;
+  }
+
+  &__time-column {
+    width: 80px;
+    border-right: 1px solid #e8e8e8;
+  }
+
+  &__day-column {
+    flex: 1;
+    min-width: 150px;
+    border-right: 1px solid #e8e8e8;
+    position: relative;
+  }
+
+  &__time-slot {
+    height: 60px;
+    padding: 8px;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__day-header {
+    @extend .schedule__time-slot;
+  }
+
+  &__time-cell {
+    height: 60px;
+    padding: 4px;
+    border-bottom: 1px solid #e8e8e8;
+    position: relative;
+  }
+
+  &__event-card {
+    position: absolute;
+    width: 95%;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.not-current-month {
+  background-color: #eaeaea;
+  color: #999;
+}
+
+.today-highlight {
+  border: 2px solid #3fa34b;
+  border-radius: 4px;
+}
+.schedule__grid {
+  display: flex;
+  height: calc(60px * 25); // = 1500px
+  position: relative;
+}
+
+.schedule__time-column {
+  width: 80px; /* cố định */
+  flex-shrink: 0;
+}
+
+.schedule__day-column {
+  flex: 1; /* chia đều */
+  min-width: 0; /* tránh tràn */
+  border-left: 1px solid #eee;
+}
+.schedule__current-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #3fa34b;
+  z-index: 10;
+  pointer-events: none;
+  .schedule__current-time-label {
+    position: absolute;
+    left: 40px;
+    top: -20px;
+    background-color: white;
+    padding: 2px 4px;
+    font-size: 12px;
+    color: #00c292;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+  }
+}
+.schedule__time-cell {
+  position: relative;
+  height: 60px; // giữ slotHeight đồng nhất
+  border-bottom: 1px solid #eee;
+}
