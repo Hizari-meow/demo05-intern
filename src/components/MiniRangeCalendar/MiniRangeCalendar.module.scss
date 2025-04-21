@@ -1,0 +1,67 @@
+.mini-range-calendar {
+    width: 320px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    &__title {
+        margin: 0 0 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &__month-year {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+
+        span {
+            margin: 0 10px;
+        }
+    }
+
+    &__nav-button {
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    &__weekdays,
+    &__days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        text-align: center;
+    }
+
+    &__weekday {
+        font-weight: bold;
+        color: #555;
+        padding: 4px 0;
+    }
+
+    &__day {
+        padding: 8px 0;
+        margin: 2px;
+        border-radius: 50%;
+        position: relative;
+
+        &--in-range {
+            background-color: #d2f4d3;
+        }
+
+        &--start,
+        &--end {
+            background-color: #34a853 !important;
+            color: white !important;
+            border-radius: 50%;
+        }
+
+        &--faded {
+            color: #ccc;
+        }
+    }
+}

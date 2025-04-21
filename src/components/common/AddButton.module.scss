@@ -1,0 +1,28 @@
+.addButton {
+    display: inline-flex;
+    align-items: center;
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  
+    &:hover {
+      background-color: #43a047;
+    }
+  
+    &:active {
+      background-color: #388e3c; /* Màu nền khi click */
+    }
+  }
+  
+  .icon {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 8px;
+  }
+  

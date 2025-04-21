@@ -1,0 +1,72 @@
+// components/CommonSidebar.module.scss
+.sidebar {
+    background-color: #ffffff;
+    width: 250px;
+    height: 1048px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.collapseSection {
+    border-bottom: 1px solid #f0f0f0;
+
+    :global(.ant-collapse-header) {
+        font-weight: 500;
+        padding: 12px 16px !important;
+    }
+
+    :global(.ant-collapse-content-box) {
+        padding: 0 16px 16px !important;
+    }
+}
+
+.section {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sectionTitle {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.functionList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.functionItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 4px 0;
+
+    &:hover {
+        color: #1890ff;
+    }
+}
+
+.folderIconGreen {
+    color: #52c41a;
+    font-size: 16px;
+}
+
+.folderIconYellow {
+    color: #faad14;
+    font-size: 16px;
+}
+
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    :global(.ant-radio-wrapper) {
+        margin-right: 0;
+    }
+}

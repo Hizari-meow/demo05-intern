@@ -1,0 +1,27 @@
+/* Filter.module.scss */
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    color: #111827;
+  }
+  
+  .filter-btn svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    color: #6b7280;
+  }
+  
+  .arrow {
+    margin-left: 6px;
+    color: #6b7280;
+    width: 14px;
+    height: 14px;
+  }
+  

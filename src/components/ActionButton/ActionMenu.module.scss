@@ -1,0 +1,53 @@
+/* Đảm bảo ActionMenu có kiểu dáng đẹp và dễ nhìn */
+.overlayMenu {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    width: 260px;
+    display: block; // ✅ Luôn hiển thị khi render, không cần .active nữa
+  }
+  
+  
+  .overlayMenu.active {
+    display: block; /* Hiển thị menu khi có class active */
+  }
+  
+  .menuItem {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #495057;
+    transition: background 0.2s;
+  }
+  
+  .menuItem:hover {
+    background-color: #f1f3f5;
+  }
+  
+  .menuItem.edit {
+    border-radius: 6px;
+  }
+  
+  .menuItem.edit:hover {
+    background-color: #e7f5ff;
+  }
+  
+  .menuItem svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+  .menuItem.delete {
+    color: #fa5252;
+    font-weight: bold;
+  }
+  
+  .menuItem.delete:hover {
+    background-color: #fff5f5;
+  }
+  

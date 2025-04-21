@@ -1,0 +1,25 @@
+/* Search.module.scss */
+.search-box {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background-color: #f9fafb;
+    color: #6b7280;
+  }
+  
+  .search-box svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 8px;
+    font-size: 14px;
+    color: #374151;
+  }
+  
