@@ -1,0 +1,150 @@
+// ProgressSection.scss
+
+.progress-section {
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    
+    &__header {
+      margin-bottom: 16px;
+      border-bottom: 1px solid #f0f0f0;
+      padding-bottom: 12px;
+    }
+    
+    &__title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
+    
+    &__content {
+      padding-bottom: 16px;
+    }
+    
+    &__progress-item {
+      margin-bottom: 20px;
+    }
+    
+    &__progress-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    &__progress-label {
+      font-size: 18px;
+      font-weight: 700;
+      margin-right: 10px;
+      width: 30px;
+      
+      &--blue {
+        color: #2D7BF4;
+      }
+      
+      &--green {
+        color: #30D158;
+      }
+      
+      &--red {
+        color: #FF453A;
+      }
+      
+      &--orange {
+        color: #FF9500;
+      }
+    }
+    
+    &__progress-description {
+      font-size: 12px;
+      color: #6E7C87;
+    }
+    
+    &__progress-bar {
+      margin-bottom: 4px;
+    }
+    
+    &__progress-total {
+      font-size: 12px;
+      color: #6E7C87;
+      text-align: right;
+    }
+    
+    &__users {
+      margin-top: 20px;
+    }
+    
+    &__user-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    
+    &__user-info {
+      display: flex;
+      align-items: center;
+    }
+    
+    &__user-avatar {
+      margin-right: 12px;
+      background-color: #2D7BF4;
+    }
+    
+    &__user-details {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    &__user-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    
+    &__user-position {
+      font-size: 12px;
+      color: #6E7C87;
+    }
+    
+    &__user-stats {
+      font-size: 12px;
+      color: #6E7C87;
+    }
+    
+    &__user-progress {
+      width: 40%;
+      display: flex;
+      align-items: center;
+    }
+    
+    &__user-progress-bar {
+      flex: 1;
+      margin-right: 8px;
+    }
+    
+    &__user-percentage {
+      font-size: 14px;
+      font-weight: 600;
+      color: #30D158;
+      width: 40px;
+      text-align: right;
+    }
+    
+    &__footer {
+      padding-top: 16px;
+      border-top: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #6E7C87;
+    }
+    
+    &__info-icon {
+      margin-right: 8px;
+      color: #2D7BF4;
+    }
+  }
